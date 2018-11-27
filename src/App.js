@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import opD from './ducks/movie';
+import { Button } from 'react-bootstrap';
 
+const { operations } = opD;
 class App extends Component {
   render() {
     return (
@@ -19,6 +22,7 @@ class App extends Component {
           >
             Learn React
           </a>
+            <Button bsStyle="primary" onClick={operations.fetchCountryList()}>Primary</Button>
         </header>
       </div>
     );
