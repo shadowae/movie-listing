@@ -120,6 +120,10 @@
   "babel": {
     "presets": [
       "react-app"
-    ]
+    ],
+    "plugins": ["@babel/plugin-proposal-export-default-from"]
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-export-default-from": "^7.0.0"
   }
 }
