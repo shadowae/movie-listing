@@ -7,10 +7,11 @@ import store from './store';
 
 import App from './containers/App';
 import * as serviceWorker from './serviceWorker';
+
 ReactDOM.render(
-    <Provider store={store} >
-        <App />
-    </Provider>, document.getElementById('root'),
+  <Provider store={store}>
+    <App />
+  </Provider>, document.getElementById('root'),
 );
 
 // ReactDOM.render(<App />, document.getElementById('root'));

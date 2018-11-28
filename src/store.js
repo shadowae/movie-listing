@@ -1,5 +1,5 @@
 import { createStore, applyMiddleware, compose } from 'redux';
-import reduxThunk from "redux-thunk";
+import reduxThunk from 'redux-thunk';
 import reducer from './reducer';
 
 // import { browserHistory } from 'react-router';
@@ -8,8 +8,8 @@ import reducer from './reducer';
 const initialState = {};
 
 const store = createStore(reducer, initialState, compose(
-    applyMiddleware(reduxThunk),
-    window.devToolsExtension ? window.devToolsExtension() : f => f
+  applyMiddleware(reduxThunk),
+  window.devToolsExtension ? window.devToolsExtension() : (f) => f,
 ));
 
 // const create = window.devToolsExtension

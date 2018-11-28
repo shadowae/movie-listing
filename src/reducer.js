@@ -5,6 +5,6 @@ import MovieDuck from './ducks/movie';
 const { reducers: movie } = MovieDuck;
 
 export default combineReducers({
-    movie,
-    routing,
+  movie,
+  routing,
 });
