@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import PropTypes from 'prop-types';
+import logo from '../logo.svg';
 import './App.css';
-import opD from './ducks/movie';
 import { Button } from 'react-bootstrap';
 
-const { operations } = opD;
+
 class App extends Component {
   render() {
     return (
@@ -22,11 +22,15 @@ class App extends Component {
           >
             Learn React
           </a>
-            <Button bsStyle="primary" onClick={operations.fetchCountryList()}>Primary</Button>
+            <Button bsStyle="primary" onClick={this.props.fetchCountryList()}>Primary</Button>
         </header>
       </div>
     );
   }
 }
+
+App.propTypes = {
+    fetchCountryList: PropTypes.func.isRequired,
+};
 
 export default App;

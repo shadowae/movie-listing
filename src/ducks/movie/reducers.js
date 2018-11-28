@@ -8,6 +8,9 @@ const movie = (state = initialState, action) => {
         case types.INITIATE_CASE: {
             return initialState;
         }
+        case types.LOAD_DATA_API: {
+            return action.movieList;
+        }
         default:
             return state;
     }

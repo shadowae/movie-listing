@@ -1,4 +1,5 @@
 import axios from 'axios';
+import actions from './actions';
 
 let url = 'https://api.themoviedb.org/3/movie/550?api_key=bce9dffc7fd76a8ef5943bdf0bfedb56';
 let options = {
@@ -19,7 +20,8 @@ const fetchCountryList = () => (dispatch) => {
         responseType: 'json'
     })
         .then(function (response) {
-            console.log(response.data);
+            console.log(response);
+            dispatch(actions.storeMovieList(response.data));
         })
         .catch(function (error) {
             console.log(error);
